@@ -67,3 +67,23 @@ let edad = 6;
 // }
 
 
+- Declarar variables para diferentes tipos de datos
+    
+    Declara variables para los siguientes datos
+    
+    - Nombre de tu Ciudad
+    - Año de nacimiento
+    - Nombre propio
+    - Tu estatura
+    - ¿El cielo es azul?
+    - Sentencia "Hola Soy X y vivo en Y" usando variables anteriores
+    - Numero de patas de una mesa
+    - Mes de nacimiento
+    - Nombre de tu serie favorita
+    - El número pi
+- Programa que te dice si un numero es mayor que otro o no
+    1. Se declaran 2 variables tipo numero
+    2. Se declara una variable de tipo booleano para albergar el resultado final
+    3. Haciendo uso de las estructuras de control y los operadores se determina si el valor de la primer variable numérica es mayor al valor de la segunda variable numérica 
+    4. Si el valor es mayor la variable de resultado deberá tener un valor verdadero, si no deberá tener un valor falso
+    5. Imprimir el resultado
