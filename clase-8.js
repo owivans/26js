@@ -116,8 +116,55 @@ functionB();
 
 
 
+-Crear una funcion que se encargue de saludar a cada persona de un arreglo, debera recibir el arreglo y un callback que se encargara de crear el saludo
 
 
-array.map(() => {
-    console.log('asdasd')
-})
+
+//Crear una funcion que se encargue de saludar a cada persona de un arreglo, 
+//debera recibir el arreglo y un callback que se encargara de crear el saludo
+
+
+-Crear una funcion
+-crear un arreglo
+-crear ese callback, es una funcion que su tarea es crear ese saludo
+-ese callback necesita recibir el nombre como parametro
+
+const personas = ['ivan', 'freddy', 'jason'];
+
+//const saludos = ['Hola ivan', 'Hola freddy', 'Hola jason'];
+
+const crearSaludo = (persona) => {
+    return 'Hola' + ' ' + persona;
+};
+
+const saludarPorPersona = (personas, crearSaludo) => {
+    const saludos = [];
+    for(const persona of personas){
+        const saludo = crearSaludo(persona);
+        saludos.push(saludo);
+    };
+    return saludos;
+};
+
+console.log(saludarPorPersona(personas, crearSaludo))
+
+
+- Crear una funcion  que se encargue de recibir un arreglo de numeros y un callback, el callback se encargara de sumarle +1 a cada numero
+
+const numeros = [1,45,7,2,7];
+
+const incrementarNumero = (numero) => {
+    return ++numero;
+};
+
+const calcularPorNumero = (incrementarNumero, numeros) => {
+    const numerosIncrementados = [];
+    for(const numero of numeros){
+        const resultado = incrementarNumero(numero);
+        numerosIncrementados.push(resultado)
+    };
+    return numerosIncrementados;
+};
+
+console.log(calcularPorNumero(incrementarNumero, numeros))
+
