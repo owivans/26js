@@ -53,6 +53,28 @@ console.log('21:12:09')
 
 setInterval(() => {
     const date = new Date();
-    console.log(date.getSeconds())
-
+    const seconds = date.getSeconds();
+    const minutes = date.getMinutes();
+    const hours = date.getHours();
+    const time = hours + ':' + minutes + ':' + seconds
+    console.log(time)
 }, 1000);
+
+
+console.log(Math.ceil(7.1)) // te redondea hacia arriba
+console.log(Math.round(7.4)) // te redondea hacia el entero mas cercanos
+console.log(Math.floor(7.9)) // te redondea hacia abajo
+console.log(Math.trunc(9.912312312)) // te remueve los numeros decimales
+console.log(Math.random());
+let numberRadom = Math.random() * (9 - 7) + 7;
+
+console.log(Math.trunc(numberRadom))
+console.log(Math.max(10,5,4,6,7));
+console.log(Math.min(10,5,4,6,7));
+
+
+'2' === 2
+let number = parseInt('2');
+number = toString(number)
+console.log(typeof number)
+const test =prompt('que edad tienes ')

@@ -168,3 +168,197 @@ const calcularPorNumero = (incrementarNumero, numeros) => {
 
 console.log(calcularPorNumero(incrementarNumero, numeros))
 
+-filtrar a los koders menores de edad
+// [
+//   {
+//     edad,
+//     nombre
+//   }
+// ]
+
+
+-sacar promedio de edad de los koders
+output: 9
+
+
+-sacar promedio de materias por koder
+
+[
+  {
+    name:
+    promedio:
+  }
+]
+
+
+const koders = [
+  {
+    name: 'Arnold',
+    generation: 11,
+    age: 19,
+    signatures: [
+        {
+            module: 'JS',
+            average: 9
+        },
+        {
+            module: 'HTML',
+            average: 9
+        },
+        {
+            module: 'React',
+            average: 10
+        }
+    ]
+  },
+  {
+    name: 'Gelga',
+    generation: 12,
+    age: 17,
+    signatures: [
+        {
+            module: 'JS',
+            average: 4
+        },
+        {
+            module: 'HTML',
+            average: 6
+        },
+        {
+            module: 'React',
+            average: 6
+        }
+    ]
+  },
+  {
+    name: 'Gerald',
+    generation: 12,
+    age: 20,
+    signatures: [
+        {
+            module: 'JS',
+            average: 7
+        },
+        {
+            module: 'HTML',
+            average: 7
+        },
+        {
+            module: 'React',
+            average: 7
+        }
+    ]
+  },
+];
+
+const calculateAverage = (koders) => {
+  const result = [];
+  for(const element of koders){
+    let promedio = 0;
+
+    for(const signature of element.signatures){
+      promedio = promedio + signature.average;
+    }
+
+    const averageKoder = promedio / element.signatures.length;
+    const infoKoder = {
+      name: element.name,
+      average: averageKoder,
+    };
+    result.push(infoKoder);
+  }
+  return result;
+};
+console.log(calculateAverage(koders))
+
+// -crear funcion
+// -itera el arreglo
+// -sumas las edades
+// -sacar el promedio contando la cantidad de koders
+
+const calculateAge = (koders) => {
+  let accum = 0;
+  for(const element of koders){
+    accum = accum + element.age
+  }
+  const average = accum / koders.length
+  return average;
+};
+
+calculateAge(koders);
+
+
+
+const filterKoders = (koders) => {
+  const adults = [];
+  for(const element of koders){
+    if(element.age >= 18){
+      const adultObject = {
+        name: element.name,
+        age: element.age,
+      }
+      adults.push(adultObject)
+    }
+  }
+  return adults;
+};
+
+filterKoders(koders);
+
+
+
+
+
+ Deducir lo que s debe hacer con base en el input y el output**
+
+input: 'a very large string'
+
+output: 'A VeRy lArGe sTrInG'
+
+input: 'abcdefg'
+
+output: 'AbCdEfG'
+
+
+
+input: 'Kodemia'
+
+output : "aimedoK"
+
+Pedir al usuario usuario un numero entre 1 y 10
+
+Imprimir la tabla de multiplicar de ese número
+
+p.ej.
+
+3 x 1 = 3
+
+3 x 2 = 6
+
+Pedir al usuario un numero entre 10 y 100
+
+Imprimir todos los numeros pares que existen entre 1 y ese numero
+
+
+Imprimir en consola el siguiente patrón
+
+ 
+ *
+ **
+ ***
+ ****
+ *****
+ ******
+ *******
+ ********
+ *********
+
+ *********
+ ********
+ *******
+ ******
+ *****
+ ****
+ ***
+ **
+ *
