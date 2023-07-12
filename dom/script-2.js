@@ -139,10 +139,6 @@ RickAndMortyCharacters.forEach((personaje) => {
     buildCard(personaje)
 });
 
-
-
-
-
 const koders = [
     {
       name: 'Arnold',
@@ -203,6 +199,33 @@ const koders = [
     },
   ];
 
+const container = document.querySelector('#top');
+const child = document.createElement('div');
+const reference = document.querySelector('#nested');
 
+child.textContent = 'child';
+
+
+container.insertBefore(child, reference);
+
+// {nodo de referencia}.insertBefore(nodo a introducir);
+
+
+const body = document.querySelector('body');
+const titulo = document.querySelector('h1');
+
+const head = document.createElement('span');
+head.textContent = 'Freddy Krueger';
+
+const list = document.querySelectorAll('.container');
+// list.forEach((node) => {
+//     console.log(node)
+//     body.removeChild(node);
+// });
+// body.insertBefore(head, titulo);
+
+// body.removeChild(titulo)
+document.body.innerHTML = '<div>hackeado</div>';
+  
 
 
