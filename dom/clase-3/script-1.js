@@ -35,7 +35,7 @@ const buildCard = (character) => {
     document.body.appendChild(container);
 };
 
-// export default fileName
+
 
 export { usd, suma, resta, buildCard };
 
