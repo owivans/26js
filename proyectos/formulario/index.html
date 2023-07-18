@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Formulario</h1>
+<form>
+  <label for="firstName">Nombre:</label>
+  <input type="text" id="firstName" name="firstName" required>
+
+  <label for="lastName">Apellido:</label>
+  <input type="text" id="lastName" name="lastName" required>
+
+  <label for="birthdate">Fecha de nacimiento:</label>
+  <input type="date" id="birthdate" name="birthdate" required>
+
+  <label>Género:</label>
+  <input type="radio" id="male" name="gender" value="male" required>
+  <label for="male">Masculino</label>
+  <input type="radio" id="female" name="gender" value="female" required>
+  <label for="female">Femenino</label>
+
+  <label for="country">País:</label>
+  <select id="country" name="country" required>
+    <option value="">Selecciona un país</option>
+    <option value="argentina">Argentina</option>
+    <option value="brasil">Brasil</option>
+    <option value="colombia">Colombia</option>
+    <option value="mexico">México</option>
+  </select>
+
+  <label for="programmingLanguages">Lenguajes de programación:</label>
+  <select id="programmingLanguages" name="programmingLanguages[]" multiple required>
+    <option value="javascript">JavaScript</option>
+    <option value="python">Python</option>
+    <option value="java">Java</option>
+    <option value="csharp">C#</option>
+  </select>
+
+  <label for="description">Descripción:</label>
+  <textarea id="description" name="description" rows="4" cols="50" required></textarea>
+
+  <span id="error-message" class="error-message"></span>
+
+  <input type="submit" value="Enviar">
+</form>
+</body>
+</html>
