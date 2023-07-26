@@ -52,6 +52,49 @@ const resultado = operacionBancaria('retirar', 1000);
 
 
 
+//Callbacks ------------------------
+
+
+const pedidoPreparado = () => {
+    console.log('tu pedido ya esta en camino')
+};
+
+
+const ordenar = (callback) => {
+    console.log('tu platillo esta en preparacion');
+    console.log('terminamos de preparar tu platillo');
+
+    setTimeout(() => {
+        callback()
+    }, 3000)
+    
+};
+
+ordenar(pedidoPreparado)
+
+setTimeout(() => {
+    callback()
+}, 4000)
+
+//------------------------
+
+//Scope ------------------------
+
+const cocina = () => {
+    const estufa = true;
+    const refrigerador = true;
+};
+
+const micuarto = () => {
+    const discos = true;
+    const videojuego = true;
+};
+
+const sala = () => {
+    const television = true;
+    const planta = true;
+};
+
 
 
 
